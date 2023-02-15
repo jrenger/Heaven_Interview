@@ -1,0 +1,82 @@
+
+body {
+font-family: "Helvetica";
+margin-bottom: 50px; 
+color: blue;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+}
+
+h1{
+font-size: 40px;
+font-family:"Helvetica"; 
+color: blue; 
+    margin-bottom: 50px;
+    }
+
+h2{
+font-size: 28px;
+}
+
+h3{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+h4{
+font-size: 20px;
+margin-bottom: 40px;
+}
+
+    
+.hauptbox{
+width: 50%;
+}
+
+img{
+height:70%;
+width:70%;
+float: center;
+}
+
+.hover-title {
+    display: inline;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hover-image {
+    visibility: hidden;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-image {
+    visibility: visible;
+    pointer-events: none;
+}
+
+.hover-image {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+/* Change width and height to scale images */
+    width: 90vw;
+    height: 90vh;
+}
+
+.hover-image img {
+    max-width: 130% !important;
+    max-height: 130% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 20;
+}
